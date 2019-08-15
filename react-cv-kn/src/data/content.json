@@ -2,8 +2,8 @@
   {
     "personal_info": [
       {
-        "fullname": "Kacper Nowosielski",
-        "position": "Fullstack Developer",
+        "fullname": "kacper_nowosielski",
+        "position": "fullstack_developer",
         "phone": "+358 44 956 1074",
         "location": "Helsinki, Finland",
         "email": "kacper.nowosielski@gmail.com",
@@ -156,6 +156,16 @@
       "Adapts quickly",
       "Hard-worker",
       "Entrepreneurial Mindset"
+    ]
+  },
+  {
+    "categories": [
+      "experience",
+      "education",
+      "technical_skills",
+      "other_skills",
+      "interests",
+      "notable_traits"
     ]
   }
 ]

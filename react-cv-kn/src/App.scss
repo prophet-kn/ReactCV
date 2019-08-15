@@ -1,32 +1,78 @@
 // Vars.
-
 $black: #000;
 $newwhite: #d6d6d6;
 $darkpurp: rgb(32, 0, 68);
 $linkpurp: rgb(122, 83, 167);
+$teal: #50e3c2;
+$largetitlefont: 75px;
+$namefontsize: 30px;
 
 // Global.
 html {
   align-items: center;
-  background-color: $black;
-  color: $newwhite;
   display: flex;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: monospace;
   justify-content: center;
   line-height: 1.33;
   margin: auto;
   min-height: 100vh;
   text-align: center;
+  word-break: break-all;
+
+  &.dark-theme {
+    background-color: $black;
+    color: $newwhite;
+
+    svg {
+      fill: $newwhite;
+
+      &:hover {
+        background-color: $darkpurp;
+        fill: $teal;
+      }
+    }
+
+    a {
+      color: $newwhite;
+      text-decoration: none;
+
+      &:hover {
+        color: $teal;
+      }
+    }
+
+    .cv {
+      &-wrap {
+        &-nav {
+          &-btn {
+            border-color: $newwhite;
+
+            &:after,
+            &:before {
+              border-color: $newwhite;
+            }
+
+            &:hover {
+              background: $darkpurp;
+              border-color: $teal;
+              color: $teal;
+
+              &:after,
+              &:before {
+                border-color: $teal;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-a {
-  color: $newwhite;
-  text-decoration: none;
-
-  &:hover {
-    color: $linkpurp;
-  }
+::selection {
+  background: $linkpurp;
+  color: $teal;
 }
 
 body {
@@ -43,19 +89,86 @@ h6 {
   padding-bottom: 10px;
 }
 
+// Spec.
 .cv {
   &-app {
     display: block;
     min-height: 100vh;
+
+    svg {
+      cursor: pointer;
+    }
   }
 
   &-wrap {
-    &-top {
+    display: flex;
+    flex: 0 1 100%;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
 
+    &-top {
+      margin-bottom: 50px;
+
+      &-pos {
+        font-size: $largetitlefont;
+        margin-top: 25px;
+      }
+
+      &-name {
+        font-size: $namefontsize;
+      }
     }
 
     &-nav {
-      
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &-btn {
+        cursor: pointer;
+        margin: 8px;
+        padding: 5px 10px;
+        position: relative;
+
+        &:after {
+          border-bottom: 1px solid;
+          border-left: 1px solid;
+          bottom: 0;
+          content: '';
+          display: block;
+          height: 15px;
+          left: 0;
+          position: absolute;
+          width: 10px;
+        }
+
+        &:before {
+          border-right: 1px solid;
+          border-top: 1px solid;
+          content: '';
+          display: block;
+          height: 15px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 10px;
+        }
+      }
+    }
+
+    &-contact {
+      margin-top: 50px;
+
+      * {
+        margin: 0 10px;
+      }
+
+      &-box {
+        display: flex;
+        flex-flow: column;
+        padding: 10px;
+      }
     }
   }
 }
