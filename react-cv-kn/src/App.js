@@ -64,6 +64,7 @@ function App() {
           <div className={"personal-information-content"}>
             <span>{personal.fullname}</span>
             <span>{personal.position}</span>
+            <span>{personal.location}</span>
             <span>{personal.phone}</span>
             <span>{personal.email}</span>
             <div className={"icons"}>

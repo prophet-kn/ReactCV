@@ -1,3 +1,4 @@
+/* OLD
 .cv-app {
   min-height: 100vh;
   display: block;
@@ -55,7 +56,7 @@ a {
 }
 
 a:hover {
-  color: #82cae2;
+  color: #205;
 }
 
 h1 {
@@ -72,7 +73,7 @@ svg {
 }
 
 svg:hover {
-  color: #82cae2;
+  color: #205;
   fill: currentColor;
 }
 
@@ -105,3 +106,4 @@ svg:hover {
     flex: 0 1 100%;
   }
 }
+*/
