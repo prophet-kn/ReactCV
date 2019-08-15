@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-cv-kn/static/css/main.2cce8147.chunk.css",
+    "main.js": "/react-cv-kn/static/js/main.6bc8ea2d.chunk.js",
+    "main.js.map": "/react-cv-kn/static/js/main.6bc8ea2d.chunk.js.map",
+    "runtime~main.js": "/react-cv-kn/static/js/runtime~main.fa658f66.js",
+    "runtime~main.js.map": "/react-cv-kn/static/js/runtime~main.fa658f66.js.map",
+    "static/js/2.c97ee3e0.chunk.js": "/react-cv-kn/static/js/2.c97ee3e0.chunk.js",
+    "static/js/2.c97ee3e0.chunk.js.map": "/react-cv-kn/static/js/2.c97ee3e0.chunk.js.map",
+    "index.html": "/react-cv-kn/index.html",
+    "precache-manifest.dc4c1da64eb2adee8c24ecd0bc611d32.js": "/react-cv-kn/precache-manifest.dc4c1da64eb2adee8c24ecd0bc611d32.js",
+    "service-worker.js": "/react-cv-kn/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/react-cv-kn/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/react-cv-kn/static/media/logo.5d5d9eef.svg"
+  }
+}
