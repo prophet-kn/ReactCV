@@ -1,109 +1,33 @@
-/* OLD
+/*
+ * Global styles.
+ */
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+  color: #d6d6d6;
+  margin: auto;
+  line-height: 1.33; }
+
+body {
+  margin: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding-bottom: 10px; }
+
 .cv-app {
   min-height: 100vh;
-  display: block;
-}
-
-.cv-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.personal-information-content,
-.languages-content {
-  display: flex;
-  flex-flow: column;
-  font-size: 20px;
-}
-
-.cv-personal-information,
-.cv-languages,
-.cv-personal-photo {
-  flex-direction: column;
-  flex: 0 1 33%;
-}
-
-.cv-education {
-  display: flex;
-  flex-flow: column;
-  flex: 0 1 100%;
-}
-
-.cv-techskills,
-.cv-otherskills,
-.cv-interests,
-.cv-notabletraits,
-.cv-col {
-  display: flex;
-  flex-flow: column;
-  flex: 0 1 50%;
-}
-
-.cv-content {
-  padding: 10px;
-}
-
-.cv-personal-photo img {
-  border-radius: 50%;
-  border: 2px #d6d6d6 solid;
-}
-
-a {
-  text-decoration: none;
-  color: #d6d6d6;
-}
-
-a:hover {
-  color: #205;
-}
-
-h1 {
-  margin: 10px 0;
-}
-
-span.label {
-  font-size: 13px;
-}
-
-svg {
-  color: #d6d6d6;
-  fill: currentColor;
-}
-
-svg:hover {
-  color: #205;
-  fill: currentColor;
-}
-
-.icons span {
-  padding: 5px 10px;
-}
-
-.exp {
-  margin-bottom: 20px;
-}
-
-.experience-content,
-.education-content,
-.techskills-content,
-.otherskills-content,
-.interests-content,
-.notabletraits-content {
-  padding: 10px;
-}
-
-@media only screen and (max-width: 818px) {
-  .cv-techskills,
-  .cv-otherskills,
-  .cv-interests,
-  .cv-notabletraits,
-  .cv-col,
-  .cv-personal-information,
-  .cv-languages,
-  .cv-personal-photo {
-    flex: 0 1 100%;
-  }
-}
-*/
+  display: block; }
