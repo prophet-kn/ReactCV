@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-cv-kn/static/css/main.0f961599.chunk.css",
-    "main.js": "/react-cv-kn/static/js/main.0b1f001e.chunk.js",
-    "main.js.map": "/react-cv-kn/static/js/main.0b1f001e.chunk.js.map",
-    "runtime~main.js": "/react-cv-kn/static/js/runtime~main.fa658f66.js",
-    "runtime~main.js.map": "/react-cv-kn/static/js/runtime~main.fa658f66.js.map",
-    "static/js/2.82ecc211.chunk.js": "/react-cv-kn/static/js/2.82ecc211.chunk.js",
-    "static/js/2.82ecc211.chunk.js.map": "/react-cv-kn/static/js/2.82ecc211.chunk.js.map",
-    "index.html": "/react-cv-kn/index.html",
-    "precache-manifest.0ee488bf7fb718c470f3a671ac162d95.js": "/react-cv-kn/precache-manifest.0ee488bf7fb718c470f3a671ac162d95.js",
-    "service-worker.js": "/react-cv-kn/service-worker.js",
-    "static/css/main.0f961599.chunk.css.map": "/react-cv-kn/static/css/main.0f961599.chunk.css.map"
+    "main.css": "/ReactCV/static/css/main.0f961599.chunk.css",
+    "main.js": "/ReactCV/static/js/main.f6c80911.chunk.js",
+    "main.js.map": "/ReactCV/static/js/main.f6c80911.chunk.js.map",
+    "runtime~main.js": "/ReactCV/static/js/runtime~main.9f8c0ae8.js",
+    "runtime~main.js.map": "/ReactCV/static/js/runtime~main.9f8c0ae8.js.map",
+    "static/js/2.82ecc211.chunk.js": "/ReactCV/static/js/2.82ecc211.chunk.js",
+    "static/js/2.82ecc211.chunk.js.map": "/ReactCV/static/js/2.82ecc211.chunk.js.map",
+    "index.html": "/ReactCV/index.html",
+    "precache-manifest.82db0969043d579105fc73d3cee0aa42.js": "/ReactCV/precache-manifest.82db0969043d579105fc73d3cee0aa42.js",
+    "service-worker.js": "/ReactCV/service-worker.js",
+    "static/css/main.0f961599.chunk.css.map": "/ReactCV/static/css/main.0f961599.chunk.css.map"
   }
 }
