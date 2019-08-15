@@ -65,14 +65,14 @@
         "school": "Etelä-Tapiolan Lukio",
         "programme": "International Baccalaureate Programme",
         "time": "01.08.10 - 08.07.13",
-        "graduated": true
+        "graduated": "Graduated"
       },
       {
         "id": 1,
         "school": "Arcada University of Applied Sciences",
-        "programme": "International Business, Major in Financial Management Banking, Leadership",
+        "programme": "International Business, Major in Financial Management, Banking and Leadership",
         "time": "01.08.15 – 28.12.18",
-        "graduated": true,
+        "graduated": "Graduated",
         "thesis": "https://www.theseus.fi/handle/10024/158005"
       }
     ]
@@ -112,7 +112,7 @@
   },
   {
     "other_skills": [
-      "Being a Dungeon Master for Dungeons & Dragons 5th edition games amongst friends and colleagues, bringing people together and team building through the use of fantasy world settings, as well as maintaining people’s development and social interaction skills.",
+      "Being a Dungeon Master for Dungeons & Dragons 5th edition games amongst friends and colleagues, bringing people together and team building through the use of fantasy world settings, as well as maintaining people’s development and social interaction skills",
       "Digital Marketing and Digital Asset Creation",
       "Search Engine Optimization",
       "UX/UI Design",

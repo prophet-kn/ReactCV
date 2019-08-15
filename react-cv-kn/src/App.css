@@ -14,6 +14,7 @@
 .languages-content {
   display: flex;
   flex-flow: column;
+  font-size: 20px;
 }
 
 .cv-personal-information,
@@ -48,16 +49,59 @@
   border: 2px #d6d6d6 solid;
 }
 
+a {
+  text-decoration: none;
+  color: #d6d6d6;
+}
+
+a:hover {
+  color: #82cae2;
+}
+
+h1 {
+  margin: 10px 0;
+}
+
+span.label {
+  font-size: 13px;
+}
+
 svg {
-  color: white;
+  color: #d6d6d6;
   fill: currentColor;
 }
 
 svg:hover {
-  color: #add8e6;
+  color: #82cae2;
   fill: currentColor;
 }
 
 .icons span {
   padding: 5px 10px;
+}
+
+.exp {
+  margin-bottom: 20px;
+}
+
+.experience-content,
+.education-content,
+.techskills-content,
+.otherskills-content,
+.interests-content,
+.notabletraits-content {
+  padding: 10px;
+}
+
+@media only screen and (max-width: 818px) {
+  .cv-techskills,
+  .cv-otherskills,
+  .cv-interests,
+  .cv-notabletraits,
+  .cv-col,
+  .cv-personal-information,
+  .cv-languages,
+  .cv-personal-photo {
+    flex: 0 1 100%;
+  }
 }
