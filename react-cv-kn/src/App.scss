@@ -16,7 +16,7 @@ html {
   justify-content: center;
   line-height: 1.33;
   margin: auto;
-  min-height: 100vh;
+  min-height: 75vh;
   text-align: center;
   word-break: break-all;
 
@@ -65,6 +65,23 @@ html {
             }
           }
         }
+
+        &-contact {
+          &-box {
+            &-inner {
+              &:hover {
+                background: $darkpurp;
+                border-color: $teal;
+                color: $teal;
+
+                &:after,
+                &:before {
+                  border-color: $teal;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -93,7 +110,7 @@ h6 {
 .cv {
   &-app {
     display: block;
-    min-height: 100vh;
+    min-height: 75vh;
 
     svg {
       cursor: pointer;
@@ -104,7 +121,7 @@ h6 {
     display: flex;
     flex: 0 1 100%;
     flex-direction: column;
-    height: 100vh;
+    height: 75vh;
     justify-content: center;
 
     &-top {
@@ -159,6 +176,7 @@ h6 {
 
     &-contact {
       margin-top: 50px;
+      position: relative;
 
       * {
         margin: 0 10px;
@@ -166,8 +184,47 @@ h6 {
 
       &-box {
         display: flex;
-        flex-flow: column;
-        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+
+        &-inner {
+          display: flex;
+          flex-flow: column;
+          margin-top: 20px;
+          position: relative;
+
+          &:after {
+            border-bottom: 1px solid;
+            border-left: 1px solid;
+            bottom: 0;
+            content: '';
+            display: block;
+            height: 15px;
+            left: 0;
+            position: absolute;
+            width: 10px;
+          }
+
+          &:before {
+            border-right: 1px solid;
+            border-top: 1px solid;
+            content: '';
+            display: block;
+            height: 15px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 10px;
+          }
+
+          * {
+            padding: 10px;
+          }
+        }
       }
     }
   }

@@ -114,7 +114,9 @@ class MainContent extends Component {
     if (this.state.contactBox !== '') {
       return (
       <div className={"cv-wrap-contact-box"}>
-        {this.state.contactBox}
+        <span className={"cv-wrap-contact-box-inner"}>
+          {_.includes(this.state.contactBox, 'https://') === true ? <a href={this.state.contactBox}>{this.state.contactBox}</a> : <span>{this.state.contactBox}</span>}
+        </span>
       </div>
       )
     }
