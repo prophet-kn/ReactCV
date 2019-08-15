@@ -2,7 +2,7 @@
   "name": "react-cv-kn",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://prophet-kn.github.io/react-cv-kn/",
+  "homepage": "https://prophet-kn.github.io/ReactCV/",
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
