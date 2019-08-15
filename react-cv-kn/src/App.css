@@ -1,0 +1,11 @@
+.cv-app {
+  min-height: 100vh;
+  display: block;
+}
+
+.cv-personalinformation,
+.cv-languages,
+.cv-experience .exp {
+  display: flex;
+  flex-flow: column;
+}

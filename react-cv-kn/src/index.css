@@ -14,6 +14,8 @@
   -moz-osx-font-smoothing: grayscale;
   background-color: #000000;
   color: #d6d6d6;
+  max-width: 1024px;
+  margin: auto;
 }
   
 body {
