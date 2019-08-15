@@ -3,9 +3,61 @@
   display: block;
 }
 
-.cv-personalinformation,
-.cv-languages,
-.cv-experience .exp {
+.cv-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.personal-information-content,
+.languages-content {
   display: flex;
   flex-flow: column;
+}
+
+.cv-personal-information,
+.cv-languages,
+.cv-personal-photo {
+  flex-direction: column;
+  flex: 0 1 33%;
+}
+
+.cv-education {
+  display: flex;
+  flex-flow: column;
+  flex: 0 1 100%;
+}
+
+.cv-techskills,
+.cv-otherskills,
+.cv-interests,
+.cv-notabletraits,
+.cv-col {
+  display: flex;
+  flex-flow: column;
+  flex: 0 1 50%;
+}
+
+.cv-content {
+  padding: 10px;
+}
+
+.cv-personal-photo img {
+  border-radius: 50%;
+  border: 2px #d6d6d6 solid;
+}
+
+svg {
+  color: white;
+  fill: currentColor;
+}
+
+svg:hover {
+  color: #add8e6;
+  fill: currentColor;
+}
+
+.icons span {
+  padding: 5px 10px;
 }
