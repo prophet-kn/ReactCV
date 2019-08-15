@@ -61,13 +61,18 @@ class MainContent extends Component {
 
   mainContent() {
     return (
-      <div className={"cv-main"}>
-        <div className={"cv-main-top"}>
+      <div className={"cv-wrap"}>
+        <div className={"cv-wrap-top"}>
           {personal.fullname}
           {personal.position}
         </div>
-        <div className={"cv-main-nav"}>
-          
+        <div className={"cv-wrap-nav"}>
+          <div className={"cv-main-nav-btn"}>Experience</div>
+          <div className={"cv-main-nav-btn"}>Education</div>
+          <div className={"cv-main-nav-btn"}>Technical Skills</div>
+          <div className={"cv-main-nav-btn"}>Other Skills</div>
+          <div className={"cv-main-nav-btn"}>Interests</div>
+          <div className={"cv-main-nav-btn"}>Notable Traits</div>
         </div>
       </div>
     )
