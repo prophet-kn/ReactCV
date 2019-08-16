@@ -125,31 +125,61 @@ class MainContent extends Component {
     }
   }
 
+  printPopup() {
+    // experience
+    if (this.state.toggled === 0) {
+      return (
+        <div className={"cv-wrap-content"}>
+          <div className={"cv-wrap-content-inner"}>
+            <h1>_experience</h1>
+            <svg width="40" height="40" viewBox="0 0 12 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+            <div className={"cv-wrap-content-inner-items"}>
+              {_.orderBy(exp).reverse().map((e, k) => {
+                if (e !== undefined) {
+                  return (
+                    <div key={k} className={"cv-wrap-content-inner-items-item"}>
+                      <span>{e.time}</span>
+                      <span>{e.company}</span>
+                      <span>{e.title}</span>
+                      <span>{e.description}</span>
+                    </div>
+                  )
+                }
+                else {
+                  return null
+                }
+              })}
+            </div>
+          </div>
+        </div>
+      )
+    }
+    // education
+    else if (this.state.toggled === 1) {
+      return (
+        <div className={"cv-wrap-content"}>
+          <div className={"cv-wrap-content-inner"}>
+
+          </div>
+        </div>
+      )
+    }
+    else {
+      return null
+    }
+
+  }
+
   render() {
     return (
       <div className={"cv-wrap"}>
         {this.mainContent()}
         {this.contactInfo()}
+        {this.printPopup()}
+        {console.log(this.state.toggled)}
       </div>
       /*
       <div className={"cv-content cv-row"}>
-        <div className={"cv-personal-photo"}>
-          <img src={pic} alt="Kacper Nowosielski"></img>
-        </div>
-        <div className={"cv-personal-information"}>
-          <h1>Personal Information</h1>
-          <div className={"personal-information-content"}>
-            <span>{personal.fullname}</span>
-            <span>{personal.position}</span>
-            <span>{personal.location}</span>
-            <span>{personal.phone}</span>
-            <span>{personal.email}</span>
-            <div className={"icons"}>
-              <span><a href={personal.github}><svg width="40" height="40" viewBox="0 0 16 16" version="1.1"><path fillRule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg></a></span>
-              <span><a href={personal.linkedin}><svg width="40" height="40" viewBox="0 0 16 16"><g fillRule="nonzero"><path d="M3.733 13h-2.8V3.714h2.8V13zM14 13h-2.8V8.04c0-1.293-.463-1.936-1.38-1.936-.727 0-1.189.36-1.42 1.081V13H5.6s.037-8.357 0-9.286h2.21l.17 1.857h.059c.574-.928 1.491-1.558 2.75-1.558.956 0 1.73.265 2.32.93.595.666.891 1.559.891 2.813V13z"></path><ellipse cx="2.333" cy="1.393" rx="1.447" ry="1.393"></ellipse></g></svg></a></span>
-            </div>
-          </div>
-        </div>
         <div className={"cv-languages"}>
           <h1>Languages</h1>
           <div className={"languages-content"}>

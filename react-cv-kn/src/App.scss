@@ -1,11 +1,14 @@
 // Vars.
 $black: #000;
 $newwhite: #d6d6d6;
+$reallydarkpurp: #0f001f;
 $darkpurp: rgb(32, 0, 68);
 $linkpurp: rgb(122, 83, 167);
 $teal: #50e3c2;
 $largetitlefont: 75px;
 $namefontsize: 30px;
+$titlefontsize: 16px;
+$labelfontsize: 11px;
 
 // Global.
 html {
@@ -18,7 +21,7 @@ html {
   margin: auto;
   min-height: 75vh;
   text-align: center;
-  word-break: break-all;
+  word-break: break-word;
 
   &.dark-theme {
     background-color: $black;
@@ -77,6 +80,31 @@ html {
                 &:after,
                 &:before {
                   border-color: $teal;
+                }
+              }
+            }
+          }
+        }
+
+        &-content {
+          background-color: $reallydarkpurp;
+          border-color: $linkpurp;
+
+          &-inner {
+            &-items {
+              &-item {
+                span {
+                  &:nth-child(2) {
+                    color: $teal;
+                  }
+
+                  &:nth-child(3) {
+                    color: $linkpurp;
+                  }
+                }
+
+                &:after {
+                  border-color: $linkpurp;
                 }
               }
             }
@@ -224,6 +252,65 @@ h6 {
           * {
             padding: 10px;
           }
+        }
+      }
+    }
+
+    &-content {
+      border: 2px solid;
+      border-radius: 20px;
+      left: 0;
+      margin: auto;
+      margin-bottom: 50px;
+      margin-top: 50px;
+      max-width: 800px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 2;
+
+      &-inner {
+        padding: 10px;
+        text-align: left;
+
+        &-items {
+          display: flex;
+          flex-flow: column;
+          position: relative;
+
+          &-item {
+            display: flex;
+            flex-flow: column;
+            margin-bottom: 15px;
+
+            span {
+              &:nth-child(2) {
+                font-size: $titlefontsize;
+                margin: 5px 0;
+              }
+
+              &:nth-child(3) {
+                margin-bottom: 5px;
+              }
+            }
+
+            &:not(:last-of-type) {
+              &:after {
+                border-bottom: 2px solid;
+                content: '';
+                display: block;
+                margin-left: -10px;
+                padding-top: 10px;
+                width: 35%;
+              }
+            }
+          }
+        }
+
+        svg {
+          position: absolute;
+          right: 8px;
+          top: 8px;
         }
       }
     }
