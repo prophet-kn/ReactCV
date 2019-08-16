@@ -62,10 +62,25 @@ class MainContent extends Component {
     super()
     this.state = {
       toggled: false,
-      contactBox: ''
+      contactBox: 'https://www.linkedin.com/in/knowosielski/'
     }
-
+    
+    this.escFunction = this.escFunction.bind(this)
     this.toggledButton = this.toggledButton.bind(this)
+  }
+
+  escFunction(event) {
+    if (event.keyCode === 27 && this.state.toggled !== false) {
+      this.setState({toggled: false})
+    }
+  }
+
+  componentDidMount() {
+    document.addEventListener("keydown", this.escFunction, false)
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.escFunction, false)
   }
 
   toggledButton(content, key) {
@@ -125,6 +140,12 @@ class MainContent extends Component {
     }
   }
 
+  closeButton() {
+    return (
+      <svg onClick={() => {this.setState({toggled: false})}} width="40" height="40" viewBox="0 0 12 16" version="1.1" aria-hidden="true"><path fillRule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+    )
+  }
+
   printPopup() {
     // experience
     if (this.state.toggled === 0) {
@@ -132,7 +153,7 @@ class MainContent extends Component {
         <div className={"cv-wrap-content"}>
           <div className={"cv-wrap-content-inner"}>
             <h1>_experience</h1>
-            <svg width="40" height="40" viewBox="0 0 12 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+            {this.closeButton()}
             <div className={"cv-wrap-content-inner-items"}>
               {_.orderBy(exp).reverse().map((e, k) => {
                 if (e !== undefined) {
@@ -154,12 +175,110 @@ class MainContent extends Component {
         </div>
       )
     }
-    // education
+    // skills
     else if (this.state.toggled === 1) {
       return (
         <div className={"cv-wrap-content"}>
           <div className={"cv-wrap-content-inner"}>
-
+            <h1>_tech_skills</h1>
+            {this.closeButton()}
+            <div className={"cv-wrap-content-inner-items-item skills"}>
+              {tech.map((t, k) => {
+                if (t !== undefined) {
+                  return (
+                    <span key={k}>{t}{tech.length !== k + 2 ? ', ' : ''}</span>
+                  )
+                }
+                else {
+                  return null
+                }
+              })}
+            </div>
+            <h1>_other_skills</h1>
+            <div className={"cv-wrap-content-inner-items-item skills"}>
+              {other.map((o, k) => {
+                if (o !== undefined) {
+                  return (
+                    <span key={k}>{o}{other.length !== k + 2 ? ', ' : ''}</span>
+                  )
+                }
+                else {
+                  return null
+                }
+              })}
+            </div>
+            <h1>_languages</h1>
+            <div className={"cv-wrap-content-inner-items-item lang"}>
+              {lang.map((l, k) => {
+                return (
+                  <span key={k}>{l}</span>
+                )
+              })}
+            </div>
+          </div>
+        </div>
+      )
+    }
+    // education
+    else if (this.state.toggled === 2) {
+      return (
+        <div className={"cv-wrap-content"}>
+          <div className={"cv-wrap-content-inner"}>
+            <h1>_education</h1>
+            {this.closeButton()}
+            {_.orderBy(edu).reverse().map((e, k) => {
+              if (e !== undefined) {
+                return (
+                  <div key={k} className={"cv-wrap-content-inner-items-item"}>
+                    <span>{e.time}</span>
+                    <span>{e.school}</span>
+                    <span>{e.programme}</span>
+                    {e.thesis !== undefined ? <a href={e.thesis}>Thesis: Benefits of utilising Agile Scrum Management in Web Development projects: A case study at Mirum Agency</a> : null}
+                    <br></br>
+                    <span>{e.graduated}</span>
+                  </div>
+                )
+              }
+              else {
+                return null
+              }
+            })}
+          </div>
+        </div>
+      )
+    }
+    // interests & traits
+    else if (this.state.toggled === 3) {
+      return (
+        <div className={"cv-wrap-content"}>
+          <div className={"cv-wrap-content-inner"}>
+            <h1>_interests</h1>
+            {this.closeButton()}
+            <div className={"cv-wrap-content-inner-items-item skills"}>
+              {int.map((i, k) => {
+                if (i !== undefined) {
+                  return (
+                    <span key={k}>{i}{int.length !== k + 2 ? ', ' : ''}</span>
+                  )
+                }
+                else {
+                  return null
+                }
+              })}
+            </div>
+            <h1>_notable_traits</h1>
+            <div className={"cv-wrap-content-inner-items-item skills"}>
+              {traits.map((t, k) => {
+                if (t !== undefined) {
+                  return (
+                    <span key={k}>{t}{traits.length !== k + 2 ? ', ' : ''}</span>
+                  )
+                }
+                else {
+                  return null
+                }
+              })}
+            </div>
           </div>
         </div>
       )
@@ -176,91 +295,9 @@ class MainContent extends Component {
         {this.mainContent()}
         {this.contactInfo()}
         {this.printPopup()}
-        {console.log(this.state.toggled)}
       </div>
       /*
-      <div className={"cv-content cv-row"}>
-        <div className={"cv-languages"}>
-          <h1>Languages</h1>
-          <div className={"languages-content"}>
-            {lang.map((l, k) => {
-              return (
-                <span key={k}>{l}</span>
-              )
-            })}
-          </div>
-        </div>
-        <div className={"cv-experience"}>
-          <h1>Work Experience</h1>
-          <div className={"experience-content cv-row"}>
-            {_.orderBy(exp).reverse().map((e, k) => {
-              if (e !== undefined) {
-                return (
-                  <div key={k} className={"exp cv-col"}>
-                    <span className={"label"}>{e.time}</span>
-                    <h3>{e.company}</h3>
-                    <h4>{e.title}</h4>
-                    <span>{e.description}</span>
-                  </div>
-                )
-              }
-              else {
-                return null
-              }
-            })}
-          </div>
-        </div>
-        <div className={"cv-education"}>
-          <h1>Education</h1>
-          <div className={"education-content cv-row"}>
-            {_.orderBy(edu).reverse().map((e, k) => {
-              if (e !== undefined) {
-                return (
-                  <div key={k} className={"edu cv-col"}>
-                    <span className={"label"}>{e.time}</span>
-                    <h3>{e.school}</h3>
-                    <span>{e.programme}</span>
-                    <span>{e.graduated}</span>
-                    {e.thesis !== undefined ? <a href={e.thesis}>Thesis: Benefits of utilising Agile Scrum Management in Web Development projects : A case study at Mirum Agency</a> : null}
-                  </div>
-                )
-              }
-              else {
-                return null
-              }
-            })}
-          </div>
-        </div>
-        <div className={"cv-techskills"}>
-          <h1>Tech Skills</h1>
-          <div className={"techskills-content"}>
-            {tech.map((t, k) => {
-              if (t !== undefined) {
-                return (
-                  <span key={k}>{t}{tech.length !== k + 2 ? ', ' : ''}</span>
-                )
-              }
-              else {
-                return null
-              }
-            })}
-          </div>
-        </div>
-        <div className={"cv-otherskills"}>
-          <h1>Other Skills</h1>
-          <div className={"otherskills-content"}>
-            {other.map((o, k) => {
-              if (o !== undefined) {
-                return (
-                  <span key={k}>{o}{other.length !== k + 2 ? ', ' : ''}</span>
-                )
-              }
-              else {
-                return null
-              }
-            })}
-          </div>
-        </div>
+      
         <div className={"cv-interests"}>
           <h1>Interests</h1>
           <div className={"interests-content"}>

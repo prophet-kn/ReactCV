@@ -55,7 +55,7 @@
         "company": "Mirum Agency",
         "title": "Fullstack Developer",
         "time": "01.08.19 – current",
-        "description": "Been part of tech delivery of one of the Mirum Helsinki’s office biggest client’s entire website rebuild which I have been a part of since the architectural setup, on Drupal 8. Also solo-building an entire AMP capabilities for the new said client’s website. Leading and training trainees and giving advice to others, continuous documentation creation, speccing features even further. Extension into other CMS platforms like Sitecore 9.1, .NET. Further dive into ReactJS, Redux, VueJS, RESTful API, Underscore.js/Lodash."
+        "description": "Been part of tech delivery of one of the Mirum Helsinki’s office biggest client’s entire website rebuild which I have been a part of since the architectural setup, on Drupal 8. Also solo-building an entire AMP capabilities for the said client’s website. Leading and training trainees and giving advice to others, continuous documentation creation, speccing features even further. Extension into other CMS platforms like Sitecore 9.1, .NET. Further dive into ReactJS, Redux, VueJS, RESTful API, Underscore.js/Lodash."
       }
     ]
   },
@@ -135,37 +135,37 @@
   },
   {
     "interests": [
-      "Fitness",
-      "Powerlifting (Been one up until a lower back injury) - maxed out at competition setting of 215/180/155 kgs deadlift/squat/bench prior to not continuing.",
-      "Video games",
-      "Video game creation",
-      "Consuming new tech knowledge at an alarming rate and testing it for fun",
-      "Rust",
-      "GraphQL",
+      "fitness",
+      "powerlifting (Been one up until a lower back injury) - maxed out at competition setting of 215/180/155 kgs deadlift/squat/bench prior to not continuing.",
+      "video games",
+      "video game creation",
+      "consuming new tech knowledge at an alarming rate and testing it for fun",
+      "rust",
+      "graphQL",
       "any JS frameworks",
-      "Fantasy lore",
-      "Been playing games from 2 years old (Super Mario Bros on Commodore 64… good times)."
+      "fantasy lore",
+      "been playing games from 2 years old (Super Mario Bros on Commodore 64… good times)."
     ]
   },
   {
     "notable_traits": [
-      "Consumes new tech knowledge quickly",
-      "Individualistic & Team Approach",
-      "Quick learner",
-      "Time reliant",
-      "Adapts quickly",
-      "Hard-worker",
-      "Entrepreneurial Mindset"
+      "consumes new tech knowledge quickly",
+      "individualistic & team approach",
+      "quick learner",
+      "time reliant",
+      "adapts quickly",
+      "hard-worker",
+      "entrepreneurial mindset",
+      "determined to get things done",
+      "outside-the-box thinker mindset"
     ]
   },
   {
     "categories": [
       "experience",
+      "skills",
       "education",
-      "technical_skills",
-      "other_skills",
-      "interests",
-      "notable_traits"
+      "interests_traits"
     ]
   }
 ]
