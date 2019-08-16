@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import _ from 'lodash'
 import Data from '../../data/content.json'
-import pic from '../../data/cvphoto.jpg'
 
 const personal = _.chain(Data)
 .map((key) => {
@@ -296,39 +295,6 @@ class MainContent extends Component {
         {this.contactInfo()}
         {this.printPopup()}
       </div>
-      /*
-      
-        <div className={"cv-interests"}>
-          <h1>Interests</h1>
-          <div className={"interests-content"}>
-            {int.map((i, k) => {
-              if (i !== undefined) {
-                return (
-                  <span key={k}>{i}{int.length !== k + 2 ? ', ' : ''}</span>
-                )
-              }
-              else {
-                return null
-              }
-            })}
-          </div>
-        </div>
-        <div className={"cv-notabletraits"}>
-          <h1>Notable Traits</h1>
-          <div className={"notabletraits-content"}>
-            {traits.map((t, k) => {
-              if (t !== undefined) {
-                return (
-                  <span key={k}>{t}{traits.length !== k + 2 ? ', ' : ''}</span>
-                )
-              }
-              else {
-                return null
-              }
-            })}
-          </div>
-        </div>
-      </div>*/
     )
   }
 

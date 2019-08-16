@@ -9,6 +9,7 @@ $largetitlefont: 75px;
 $namefontsize: 30px;
 $titlefontsize: 16px;
 $labelfontsize: 11px;
+$mobiletitlefontsize: 14px;
 
 // Global.
 html {
@@ -350,6 +351,28 @@ h6 {
         border-top: 2px solid;
         left: 0;
         top: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .cv {
+    &-wrap {
+      &-top {
+        &-pos {
+          font-size: $namefontsize;
+        }
+
+        &-name {
+          font-size: $mobiletitlefontsize;
+        }
+      }
+
+      &-nav {
+        &-btn {
+          font-size: $labelfontsize;
+        }
       }
     }
   }
