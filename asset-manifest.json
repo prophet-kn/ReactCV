@@ -1,15 +1,16 @@
 {
   "files": {
     "main.css": "/ReactCV/static/css/main.ef01c0cf.chunk.css",
-    "main.js": "/ReactCV/static/js/main.88e0379d.chunk.js",
-    "main.js.map": "/ReactCV/static/js/main.88e0379d.chunk.js.map",
+    "main.js": "/ReactCV/static/js/main.6bd5d444.chunk.js",
+    "main.js.map": "/ReactCV/static/js/main.6bd5d444.chunk.js.map",
     "runtime~main.js": "/ReactCV/static/js/runtime~main.9f8c0ae8.js",
     "runtime~main.js.map": "/ReactCV/static/js/runtime~main.9f8c0ae8.js.map",
-    "static/js/2.0f9919fe.chunk.js": "/ReactCV/static/js/2.0f9919fe.chunk.js",
-    "static/js/2.0f9919fe.chunk.js.map": "/ReactCV/static/js/2.0f9919fe.chunk.js.map",
+    "static/js/2.05cf7072.chunk.js": "/ReactCV/static/js/2.05cf7072.chunk.js",
+    "static/js/2.05cf7072.chunk.js.map": "/ReactCV/static/js/2.05cf7072.chunk.js.map",
     "index.html": "/ReactCV/index.html",
-    "precache-manifest.fdea11ab5d20d5640b5f69f8304e0ee8.js": "/ReactCV/precache-manifest.fdea11ab5d20d5640b5f69f8304e0ee8.js",
+    "precache-manifest.8401661d0803cf8b0f96d1028c0c980a.js": "/ReactCV/precache-manifest.8401661d0803cf8b0f96d1028c0c980a.js",
     "service-worker.js": "/ReactCV/service-worker.js",
-    "static/css/main.ef01c0cf.chunk.css.map": "/ReactCV/static/css/main.ef01c0cf.chunk.css.map"
+    "static/css/main.ef01c0cf.chunk.css.map": "/ReactCV/static/css/main.ef01c0cf.chunk.css.map",
+    "static/media/CN_Kacper_Nowosielski.pdf": "/ReactCV/static/media/CN_Kacper_Nowosielski.5b562c73.pdf"
   }
 }
