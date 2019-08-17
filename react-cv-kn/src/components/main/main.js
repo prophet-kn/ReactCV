@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import _ from 'lodash'
 import Data from '../../data/content.json'
+import cv from '../../data/CN_Kacper_Nowosielski.pdf'
 
 const personal = _.chain(Data)
 .map((key) => {
@@ -119,19 +120,29 @@ class MainContent extends Component {
         <svg onClick={() => {this.setState({contactBox: personal.email})}} width="40" height="40" viewBox="0 0 14 16" version="1.1" aria-hidden="true"><path fillRule="evenodd" d="M0 4v8c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H1c-.55 0-1 .45-1 1zm13 0L7 9 1 4h12zM1 5.5l4 3-4 3v-6zM2 12l3.5-3L7 10.5 8.5 9l3.5 3H2zm11-.5l-4-3 4-3v6z"></path></svg>
         <svg onClick={() => {this.setState({contactBox: personal.phone})}} width="40" height="40" viewBox="0 0 10 16" version="1.1" aria-hidden="true"><path fillRule="evenodd" d="M9 0H1C.45 0 0 .45 0 1v14c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V1c0-.55-.45-1-1-1zM5 15.3c-.72 0-1.3-.58-1.3-1.3 0-.72.58-1.3 1.3-1.3.72 0 1.3.58 1.3 1.3 0 .72-.58 1.3-1.3 1.3zM9 12H1V2h8v10z"></path></svg>
         <svg onClick={() => {this.setState({contactBox: personal.location})}} width="40" height="40" viewBox="0 0 12 16" version="1.1" aria-hidden="true"><path fillRule="evenodd" d="M6 0C2.69 0 0 2.5 0 5.5 0 10.02 6 16 6 16s6-5.98 6-10.5C12 2.5 9.31 0 6 0zm0 14.55C4.14 12.52 1 8.44 1 5.5 1 3.02 3.25 1 6 1c1.34 0 2.61.48 3.56 1.36.92.86 1.44 1.97 1.44 3.14 0 2.94-3.14 7.02-5 9.05zM8 5.5c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+        <svg onClick={() => {this.setState({contactBox: personal.static_cv})}}width="40" height="40" viewBox="0 0 12 16" version="1.1" aria-hidden="true"><path fillRule="evenodd" d="M8.5 1H1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V4.5L8.5 1zM1 2h4a.68.68 0 0 0-.31.2 1.08 1.08 0 0 0-.23.47 4.22 4.22 0 0 0-.09 1.47c.06.609.173 1.211.34 1.8A21.78 21.78 0 0 1 3.6 8.6c-.5 1-.8 1.66-.91 1.84a7.156 7.156 0 0 0-.69.3c-.362.165-.699.38-1 .64V2zm4.42 4.8a5.65 5.65 0 0 0 1.17 2.09c.275.237.595.417.94.53-.64.09-1.23.2-1.81.33-.618.15-1.223.347-1.81.59s.22-.44.61-1.25c.365-.74.67-1.51.91-2.3l-.01.01zM11 14H1.5a.743.743 0 0 1-.17 0 2.12 2.12 0 0 0 .73-.44 10.14 10.14 0 0 0 1.78-2.38c.31-.13.58-.23.81-.31l.42-.14c.45-.13.94-.23 1.44-.33s1-.16 1.48-.2c.447.216.912.394 1.39.53.403.11.814.188 1.23.23h.38V14H11zm0-4.86a3.743 3.743 0 0 0-.64-.28 4.221 4.221 0 0 0-.75-.11c-.411.003-.822.03-1.23.08a3 3 0 0 1-1-.64 6.07 6.07 0 0 1-1.29-2.33c.111-.661.178-1.33.2-2 .02-.25.02-.5 0-.75a1.05 1.05 0 0 0-.2-.88.82.82 0 0 0-.61-.23H8l3 3v4.14z"></path></svg>
         {this.contactBoxWrap()}
       </div>
     )
   }
 
   contactBoxWrap() {
-    if (this.state.contactBox !== '') {
+  if (this.state.contactBox !== '' && this.state.contactBox !== 'Check CV in PDF') {
       return (
       <div className={"cv-wrap-contact-box"}>
         <span className={"cv-wrap-contact-box-inner"}>
           {_.includes(this.state.contactBox, 'https://') === true ? <a href={this.state.contactBox}>{this.state.contactBox}</a> : <span>{this.state.contactBox}</span>}
         </span>
       </div>
+      )
+    }
+    else if (this.state.contactBox === 'Check CV in PDF') {
+      return (
+        <div className={"cv-wrap-contact-box"}>
+          <span className={"cv-wrap-contact-box-inner"}>
+            <a href={cv} target="_blank">{this.state.contactBox}</a>
+          </span>
+        </div>
       )
     }
     else {
