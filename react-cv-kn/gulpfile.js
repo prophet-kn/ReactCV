@@ -1,6 +1,6 @@
 'use strict'
 
-var gulp = require('gulp-param')(require('gulp'), process.argv)
+var gulp = require('gulp')
 var sass = require('gulp-sass')
 var bulkSass = require('gulp-sass-bulk-import')
 var sassLint = require('gulp-sass-lint')
@@ -23,8 +23,8 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(cssDest))
 })
  
-gulp.task('sass:watch', ['sass'], function() {
+gulp.task('sass:watch',  gulp.series(['sass'], function() {
   gulp.watch(scssSrc, gulp.series(['sass']))
-})
+}))
 
 gulp.task('default', gulp.series(['sass:watch']))
