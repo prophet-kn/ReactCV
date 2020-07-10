@@ -9,7 +9,7 @@
         "email": "kacper.nowosielski@gmail.com",
         "github": "https://github.com/prophet-kn",
         "linkedin": "https://www.linkedin.com/in/knowosielski/",
-        "static_cv": "Check CV in PDF",
+        "static_cv": "Check CV in PDF (not updated yet)",
         "dnd_app": "Check my D&D app!"
       }
     ]
@@ -56,8 +56,15 @@
         "id": 4,
         "company": "Mirum Agency",
         "title": "Fullstack Developer",
-        "time": "01.08.19 – current",
+        "time": "01.08.19 – 13.01.20",
         "description": "Been part of tech delivery of one of the Mirum Helsinki’s office biggest client’s entire website rebuild which I have been a part of since the architectural setup, on Drupal 8. Also solo-building an entire AMP capabilities for the said client’s website. Leading and training trainees and giving advice to others, continuous documentation creation, speccing features even further. Extension into other CMS platforms like Sitecore 9.1, .NET. Further dive into ReactJS, Redux, VueJS, RESTful API, Underscore.js/Lodash."
+      },
+      {
+        "id": 5,
+        "company": "Siili Solutions",
+        "title": "Software developer, consultant",
+        "time": "13.01.20 - current",
+        "description": "Working with Drupal 8 and Drupal 9 as well as Vue.js components for a couple of clients, hosted on Acquia and using ACSF and utilizing Cloudflare CDN. Also productizing Drupal. More to come as description is not done."
       }
     ]
   },

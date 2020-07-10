@@ -128,7 +128,7 @@ class MainContent extends Component {
   }
 
   contactBoxWrap() {
-  if (this.state.contactBox !== '' && this.state.contactBox !== 'Check CV in PDF') {
+  if (this.state.contactBox !== '' && this.state.contactBox !== 'Check CV in PDF (not updated yet)') {
       return (
       <div className={"cv-wrap-contact-box"}>
         <span className={"cv-wrap-contact-box-inner"}>
@@ -137,11 +137,11 @@ class MainContent extends Component {
       </div>
       )
     }
-    else if (this.state.contactBox === 'Check CV in PDF') {
+    else if (this.state.contactBox === 'Check CV in PDF (not updated yet)') {
       return (
         <div className={"cv-wrap-contact-box"}>
           <span className={"cv-wrap-contact-box-inner"}>
-            <a href={cv} target="_blank">{this.state.contactBox}</a>
+            <a href={cv} rel="noopener noreferrer" target="_blank">{this.state.contactBox}</a>
           </span>
         </div>
       )
